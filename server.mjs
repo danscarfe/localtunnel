@@ -14,7 +14,7 @@ export default function (opt) {
 
   const validHosts = opt.domain ? [opt.domain] : undefined;
   const myTldjs = tldjs.fromUserSettings({ validHosts });
-  const landingPage = opt.landing || "https://localtunnel.github.io/www/";
+  const landingPage = opt.landing || "https://www.hobots.app/";
 
   function GetClientIdFromHostname(hostname) {
     return myTldjs.getSubdomain(hostname);
