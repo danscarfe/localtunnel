@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . /app
 RUN yarn install --production && yarn cache clean
 
-EXPOSE 443
-CMD node ./bin/server.mjs --port=443
+EXPOSE 80
+CMD node ./bin/server.mjs
