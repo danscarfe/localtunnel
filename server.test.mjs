@@ -16,7 +16,7 @@ describe("Server", () => {
   it("should redirect root requests to landing page", async () => {
     const server = createServer();
     const res = await request(server).get("/");
-    assert.equal("https://www.hobots.app/", res.headers.location);
+    assert.equal("https://web.hobots.app/", res.headers.location);
   });
 
   it("should support custom base domains", async () => {
@@ -25,7 +25,7 @@ describe("Server", () => {
     });
 
     const res = await request(server).get("/");
-    assert.equal("https://www.hobots.app/", res.headers.location);
+    assert.equal("https://web.hobots.app/", res.headers.location);
   });
 
   it("reject long domain name requests", async () => {
