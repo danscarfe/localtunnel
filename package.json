@@ -28,7 +28,8 @@
   },
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.js'",
-    "start": "./bin/server",
-    "dev": "node-dev bin/server --port 3000"
+    "start": "node ./bin/server.mjs",
+    "deploy": "node aws-deploy",
+    "dev": "node bin/server.mjs --port 3000"
   }
 }
