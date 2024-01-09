@@ -144,18 +144,21 @@ export default function (opt) {
   server.on("upgrade", (req, socket, head) => {
     const hostname = req.headers.host;
     if (!hostname) {
+      console.log(`hostname ${hostname} not allowed.`);
       socket.destroy();
       return;
     }
 
     const clientId = GetClientIdFromHostname(hostname);
     if (!clientId) {
+      console.log(`client ${clientId} not found on hostname.`);
       socket.destroy();
       return;
     }
 
     const client = manager.getClient(clientId);
     if (!client) {
+      console.log(`client ${clientId} not found!`);
       socket.destroy();
       return;
     }
