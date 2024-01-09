@@ -32,6 +32,7 @@ export default function (opt) {
     ctx.body = {
       tunnels: stats.tunnels,
       mem: process.memoryUsage(),
+      clients: Object.keys(manager.clients),
     };
   });
 
