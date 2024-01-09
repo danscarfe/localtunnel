@@ -20,8 +20,8 @@ export default function (opt) {
     return myTldjs.getSubdomain(hostname);
   }
 
+  const server = http.createServer();
   const manager = new ClientManager(opt);
-
   const schema = opt.secure ? "https" : "http";
 
   const app = new Koa();
@@ -113,8 +113,6 @@ export default function (opt) {
     ctx.body = info;
     return;
   });
-
-  const server = http.createServer();
 
   const appCallback = app.callback();
 
