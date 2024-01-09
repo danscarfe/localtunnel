@@ -6,4 +6,4 @@ COPY . /app
 RUN yarn install --production && yarn cache clean
 
 EXPOSE 80
-CMD DEBUG=* node ./bin/server.mjs --domain=tunnel.hobots.app --secure
+CMD DEBUG=lt:ClientManager*,lt:TunnelAgent*,lt:Client*,lt:server node ./bin/server.mjs --domain=tunnel.hobots.app --secure
