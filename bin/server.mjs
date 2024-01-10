@@ -47,6 +47,16 @@ server.listen(argv.port, argv.address, () => {
   debug("server listening on port: %d", server.address().port);
 });
 
+const server2 = CreateServer({
+  max_tcp_sockets: argv["max-sockets"],
+  secure: argv.secure,
+  domain: argv.domain,
+});
+
+server2.listen(4001, argv.address, () => {
+  debug("server 2 listening on port: %d", server2.address().port);
+});
+
 process.on("SIGINT", () => {
   process.exit();
 });
