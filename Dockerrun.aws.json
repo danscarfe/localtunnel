@@ -1,0 +1,21 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Ports": [
+    {
+      "ContainerPort": 80
+    },
+    {
+      "ContainerPort": 4000
+    },
+    {
+      "ContainerPort": 4001
+    }
+  ],
+  "Cmd": [
+    "DEBUG=lt:ClientManager*,lt:TunnelAgent*,lt:Client*,lt:server",
+    "node",
+    "./bin/server.mjs",
+    "--domain=tunnel.hobots.app",
+    "--secure"
+  ]
+}
