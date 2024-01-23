@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.mjs'",
-    "start": "node ./bin/server.mjs --domain=xrai-proxy.azurewebsites.net --port 8080",
+    "start": "node ./bin/server.mjs --domain=proxy.xrai.glass --port 8080",
     "dev": "node bin/server.mjs --port 3000"
   }
 }
