@@ -28,8 +28,7 @@
   },
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.mjs'",
-    "start": "node ./bin/server.mjs --domain=alan.local",
-    "deploy": "node aws-deploy",
+    "start": "node ./bin/server.mjs --domain=xrai-proxy.azurewebsites.net",
     "dev": "node bin/server.mjs --port 3000"
   }
 }
